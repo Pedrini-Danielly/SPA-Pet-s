@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>SPA Pet's</title>
+    <!-- EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+  </head>
+  <body>
+   <header>
+      <h1>🐾 SPA Pet's 🐾</h1>
+    </header>
+
+    <div class="container">
+      <!-- COLUNA ESQUERDA - ARTIGOS E SECTIONS -->
+      <main>
+        <section id="sobre-tosadora">
+          <h2>🐾 Groomer Danny</h2>
+          <div class="profile-container">
+            <img
+              src="./assets/Groomer Danny.jpeg"
+              alt="Danielly Pedrini"
+              class="profile-photo"
+            />
+            <div class="profile-info">
+              <p>
+                <strong>Danielly Pedrini</strong> é a fundadora do SPA Pet's,
+                apaixonada por pets e especializada em banho e tosa, com
+                atendimento dedicado e cuidadoso. Atua há anos garantindo o
+                bem-estar e beleza dos animais.
+              </p>
+              <p>
+                Com experiência em diferentes raças e temperamentos, o SPA Pet's
+                oferece um serviço personalizado que prioriza o conforto e a
+                segurança dos pets em um ambiente relaxante e acolhedor.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="curiosidades-gatos">
+          <h2>🐈‍⬛ Curiosidades sobre Gatos</h2>
+          <div class="curiosidade-container">
+            <img
+              id="gato-photo"
+              src="https://cataas.com/cat?width=400&height=400"
+              alt="Gato"
+              class="curiosidade-photo"
+            />
+            <p id="curiosidade-gato" class="curiosidade-text">
+              Carregando curiosidade...
+            </p>
+          </div>
+        </section>
+
+        <section id="curiosidades-cachorros">
+          <h2>🐕 Curiosidades sobre Cachorros</h2>
+          <div class="curiosidade-container">
+            <img
+              id="cachorro-photo"
+              src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&h=400&fit=crop"
+              alt="Cachorro"
+              class="curiosidade-photo"
+            />
+            <p id="curiosidade-cachorro" class="curiosidade-text">
+              Carregando curiosidade...
+            </p>
+          </div>
+        </section>
+
+        <section id="adocoes">
+          <h2>🐰 Adote um Pet</h2>
+          <div class="curiosidade-container">
+            <p class="curiosidade-text">
+              A adoção responsável é um ato de amor que transforma vidas! Ao adotar um pet, você não apenas ganha um companheiro fiel, mas também salva uma vida e abre espaço para que outros animais possam ser resgatados. Procure ONGs locais, abrigos e feiras de adoção em sua cidade. Lembre-se: adotar é um compromisso de longo prazo que requer dedicação, amor e responsabilidade veterinária.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <!-- COLUNA DIREITA - VÍDEO E AGENDAMENTO -->
+      <aside>
+        <section id="video-apresentacao">
+          <h2>🎥 Conheça o SPA Pet's</h2>
+          <div class="video-container">
+            <video
+              src="./assets/SPA Pet's.mp4"
+              type="video/mp4"
+              autoplay
+              loop
+              muted
+            >
+              <p>Seu navegador não suporta vídeos HTML5.</p>
+            </video>
+          </div>
+        </section>
+
+        <section id="agendamento">
+          <h2>📅 Agendamento</h2>
+          <form id="form-agendamento">
+            <label
+              >Nome do Tutor:
+              <input type="text" name="tutor" required />
+            </label>
+            <label
+              >Nome do Pet:
+              <input type="text" name="pet" required />
+            </label>
+            <label
+              >Telefone:
+              <input type="tel" name="telefone" required />
+            </label>
+            <label
+              >Serviço:
+              <select name="servico" id="servico" required>
+                <option value="banho">Banho</option>
+                <option value="banho_tosa_higienica">
+                  Banho + Tosa Higiênica
+                </option>
+                <option value="tosa_tesoura">Tosa na Tesoura</option>
+                <option value="tosa_completa">Tosa Completa</option>
+              </select>
+            </label>
+
+            <div id="opcoes-tosa" style="display: none">
+              <label
+                ><input type="checkbox" name="rostinho" /> Manter
+                rostinho</label
+              >
+              <label><input type="checkbox" name="rabo" /> Manter rabo</label>
+            </div>
+
+            <label
+              >Data:
+              <input type="date" name="data" required />
+            </label>
+            <label
+              >Horário:
+              <select name="horario" id="horario" required></select>
+            </label>
+
+            <label
+              ><input type="checkbox" id="taxiDog" /> Precisa de Táxi
+              Dog?</label
+            >
+            <div id="endereco" style="display: none">
+              <label
+                >Endereço:
+                <input type="text" name="endereco" />
+              </label>
+            </div>
+
+            <button type="submit">Agendar via WhatsApp</button>
+          </form>
+        </section>
+      </aside>
+    </div>
+    </div>
+    <script>
+      // Inicializar EmailJS
+      emailjs.init('A8X0s44lk1IikjrlX'); // Substitua pela sua chave pública do EmailJS
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
